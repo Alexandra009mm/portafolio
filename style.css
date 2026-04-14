@@ -11,7 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 h1{
-    color: beige;
+    color: rgb(255, 255, 255);
 }
 header{
     background-color: rgb(0, 0, 0);
@@ -33,18 +33,12 @@ nav a{
     display: flex;
 }
 
-nav:hover{
-    color: brown;
-}
+
 
 ul{
     display: flex;
 }
 
-a {
-    align-items: center;
-    padding: 10px;
-} 
 
 @media (max-width: 430px){
     header{
@@ -156,7 +150,7 @@ body {
 }
 
 h1 {
-    color: beige;
+    color: rgb(255, 255, 255);
 }
 
 /* 2. Header y Navegación (Corregido para alineación limpia) */
@@ -183,10 +177,6 @@ header {
     padding: 10px;
 }
 
-/* Hover aplicado correctamente al texto del enlace */
-.nav-list a:hover {
-    color: brown;
-}
 
 .nav-list img {
     width: 30px;
@@ -208,10 +198,11 @@ header {
 
 .ADOPTA {
     color: rgb(39, 39, 35);
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.4); /* Mantiene tu colorimetría */
+    border: 2px solid #387fff91;
+    background-color: rgba(255, 255, 255, 0.411); /* Mantiene tu colorimetría */
     padding: 30px;
     max-width: 800px;
+    border-radius: 20px;
 }
 
 .ADOPTA h2 {
@@ -228,7 +219,9 @@ main {
     display: flex;
     flex-direction: column; /* Apila los bloques uno abajo del otro */
     gap: 50px; /* Espacio entre el bloque 1 y el bloque 2 */
-    padding: 40px 20px;
+    min-height: 100vh;
+    margin: 40px;
+
 }
 
 .bloque-proyecto {
@@ -300,7 +293,7 @@ main {
     flex-direction: row;
     gap: 50px;
     align-items: center;
-    margin: 0 auto;
+    margin: 40px;
     color: rgb(255, 255, 255);
     justify-content: center;
 }
@@ -316,12 +309,9 @@ footer {
     align-items: center;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
-    
+    margin-top: 100px;
 }
 
-a {
-    color: rgb(255, 255, 255);
-}
 
 button {
     background-color: rgb(0, 0, 0);
@@ -332,11 +322,11 @@ button {
     cursor: pointer;
 }
 
-.contenedor_galeria {
+.box_galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
+    gap: 30px;
+    margin: 60px;
 }
 
 .img_galeria {
@@ -344,14 +334,87 @@ button {
     border-radius: 10px;
 }
 
-.img_galeria img {
+.img_galeria{
     width: 100%;
     height: 200px;
     object-fit: cover;
     transition: transform 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: 2px solid rgba(14, 89, 230, 0.315);
 }
 
 /* EFECTO HOVER */
-.img_galeria:hover img {
+.img_galeria:hover {
     transform: scale(1.1);
+
+    
+}
+
+h2#titulo_galeria {
+    margin: 60px;
+    border: 2px solid #387fff91;
+    padding: 5px 5px;
+    width: 35%;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: #e4ffff;
+    justify-self: center;
+    text-align: center;
+}
+
+#marca_footer{
+    color: white;
+}
+
+@media (max-width: 430px){
+    .conteneder_footer{
+        flex-direction: column;
+    }
+    h2#titulo_galeria{
+        margin-top: 15px;
+
+    }
+    nav ul{
+        flex-direction: column;
+    }
+}
+
+.titulo_proyectos{
+    color: black;
+}
+
+ li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: -webkit-grabbing;
+    -webkit-text-stroke: 0.80px rgb(68, 141, 209); 
+    align-items: center;
+    padding: 10px;
+    
+    
+}
+
+a:hover {
+    color: rgba(0, 0, 252, 0.651);
+    transition: 0.12;
+    font-size: 19px;
+    transition: 0.10;
+    
+}
+
+button{
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: -webkit-grabbing;
+    border: 2px solid rgba(68, 177, 250, 0.644);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    color: rgba(105, 174, 253, 0.651);
+    transition: 0.12;
+    font-size: 19px;
+    transition: 0.10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
